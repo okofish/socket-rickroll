@@ -1,0 +1,14 @@
+{
+  "name": "socketio-rickroll",
+  "author": "Jesse Friedman <jfriedman@migroseti.org>",
+  "version": "0.0.1",
+  "description": "synchronous rickrolling with socket.io",
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/okofish/socket-rickroll"
+  },
+  "dependencies": {
+    "express": "4.10.2",
+    "socket.io": "1.2.0"
+  }
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--<meta name = "viewport" content = "height = 750,
+	       initial-scale = 2.3, user-scalable = no">-->
+    <title>Rickroll Controller</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+	  html {height:100%;}
+      body { font: 13px Helvetica, Arial; height:100%; background: black; }
+      #activate { width: 100%; height: 550px; background: rgb(255, 0, 0); border: true; padding: 10px; margin: 0 auto 0 auto; }
+	  #pause { width: 100%; height: 320px; background: rgb(0, 0, 255); border: true; padding: 10px; }
+	  #unpause { width: 100%; height: 250px; background: rgb(0, 255, 0); border: true; padding: 10px; }
+	  #end { width: 100%; height: 80px; background: rgb(85, 85, 85); border: true; padding: 10px; }
+	  #refresh { width: 100%; height: 80px; background: rgb(175, 85, 85); border: true; padding: 10px; }
+	  h1 { font-size: 72pt; color: #FFFFFF; }
+	  h2 { font-size: 48pt; color: #FFFFFF; }
+	  h3 { font-size: 24pt; color: #FFFFFF; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <form id="activateform" action="">
+      <center>
+			<button id="activate"><h1>Play</h1><br><!-- you can put the url of your main page here to help you remember it when opening on target computers --></button>
+  	  </center>
+    </form>
+    <form id="pauseform" action="">
+      <center>
+	  		<button id="pause"><h2>Pause</h2></button>
+  	  </center>
+    </form>
+    <form id="unpauseform" action="">
+      <center>
+	  		<button id="unpause"><h2>Unpause</h2></button>
+  	  </center>
+    </form>
+    <form id="endform" action="">
+      <center>
+	  		<button id="end"><h3>End Show</h3></button>
+  	  </center>
+    </form>
+    <form id="refreshform" action="">
+      <center>
+	  		<button id="refresh"><h3>Refresh Page</h3></button>
+  	  </center>
+    </form>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var socket = io();
+      $('#activateform').submit(function(){
+        socket.emit('roll', $('#m').val());
+        return false;
+      });
+      $('#pauseform').submit(function(){
+        socket.emit('pause', $('#m').val());
+        return false;
+      });
+      $('#unpauseform').submit(function(){
+        socket.emit('unpause', $('#m').val());
+        return false;
+      });
+      $('#endform').submit(function(){
+        socket.emit('end', $('#m').val());
+        return false;
+      });
+      $('#refreshform').submit(function(){
+        socket.emit('refresh', $('#m').val());
+        return false;
+      });
+    </script>
+  </body>
+</html>
