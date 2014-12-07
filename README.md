@@ -10,3 +10,7 @@ How to Use
 ----------
 
 Start with `node index.js`. Root (index.html) serves up a blank page until the play button is pressed on /run (run.html). /run is optimized for mobile devices as a remote. Pause and Unpause are pretty self-explanatory. End Show deletes the video element, but it can't be restarted from there. You have to click Refresh Page.
+
+
+**Rickrolled the Apple Store!**
+![Rickrolled the Apple Store!](http://i.imgur.com/Yk9ghWi.jpg "Rickrolled the Apple Store!")
