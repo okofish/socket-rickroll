@@ -1,4 +1,4 @@
-socket-rickroll
+socket-rickroll [![Build Status](https://travis-ci.org/okofish/socket-rickroll.svg?branch=master)](https://travis-ci.org/okofish/socket-rickroll)
 ===============
 
 A synchronous rickrolling system built with Node.JS and Socket.IO.
